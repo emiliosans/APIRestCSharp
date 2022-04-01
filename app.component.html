@@ -1,0 +1,36 @@
+
+
+<body>
+    <main id="hero">
+    <div class="promo">
+        <h1>¿Estás listo para unas vacaciones</h1>
+        <p> ALOJAMIENTO, VUELOS, EQUIPAJE Y MUCHO</p>
+      <button type="button">EMPIEZA HOY</button>
+   </div>
+
+    <video muted autoplay loop>
+      <source src="assets/riaBackgroundVideo.mp4"
+      type="video/mp4">
+    </video>
+    
+    <div class="capa"></div>
+
+    <calculadora></calculadora>
+    
+<hr>
+<hr>
+<app-alerta mensaje="Mensaje 1"></app-alerta>
+<app-alerta [subtitulo]="titulos[0]"></app-alerta>
+<!--recogemos como un evento click el evento emitido desde el hijo al padre
+que es (alertaPulsada) y lo recogemos en el metodo .ts del padre onAlertaPulsada($event)
+y le pasamos el $event para recoger el contenido del evento que viene del hijo que en este
+caso es un string-->
+<app-alerta (alertaPulsada)="onAlertaPulsada($event)"></app-alerta>
+
+<!--con [([(ngModel)] se modifica el valor del campo de texto y de la variable
+del .ts a la vez-->
+<input type="text" [(ngModel)]="campoTexto")]>
+<p>{{campoTexto}}</p>
+<script type="text/javascript" src="angular-video-background.min.js"></script>
+</main>
+</body>
